@@ -99,14 +99,14 @@ func processTemplateVariables(content string, cfg *Config) string {
 	result := content
 
 	replacements := map[string]string{
-		"{{PROJECT_NAME}}":         cfg.ProjectName,
-		"{{PROJECT_NAME_UPPER}}":   strings.ToUpper(cfg.ProjectName[:1]) + cfg.ProjectName[1:],
-		"{{PROJECT_NAME_LOWER}}":   strings.ToLower(cfg.ProjectName),
-		"{{DESCRIPTION}}":          cfg.Description,
-		"{{LANGUAGE}}":             cfg.Language,
-		"{{TRANSPORT}}":            cfg.Transport,
-		"{{MODULE_PATH}}":          fmt.Sprintf("github.com/EdgarOrtegaRamirez/%s", cfg.ProjectName),
-		"{{MAINTAINER}}":           "EdgarOrtegaRamirez",
+		"{{PROJECT_NAME}}":       cfg.ProjectName,
+		"{{PROJECT_NAME_UPPER}}": strings.ToUpper(cfg.ProjectName[:1]) + cfg.ProjectName[1:],
+		"{{PROJECT_NAME_LOWER}}": strings.ToLower(cfg.ProjectName),
+		"{{DESCRIPTION}}":        cfg.Description,
+		"{{LANGUAGE}}":           cfg.Language,
+		"{{TRANSPORT}}":          cfg.Transport,
+		"{{MODULE_PATH}}":        fmt.Sprintf("github.com/EdgarOrtegaRamirez/%s", cfg.ProjectName),
+		"{{MAINTAINER}}":         "EdgarOrtegaRamirez",
 	}
 
 	for placeholder, value := range replacements {

@@ -28,14 +28,14 @@ dependencies, tests, and CI/CD pipelines. Supports Python, TypeScript, and Go.`,
 
 func newScaffoldCmd() *cobra.Command {
 	var (
-		language     string
-		transport    string
-		name         string
-		outputDir    string
-		tools        int
-		resources    int
-		prompts      int
-		description  string
+		language    string
+		transport   string
+		name        string
+		outputDir   string
+		tools       int
+		resources   int
+		prompts     int
+		description string
 	)
 
 	cmd := &cobra.Command{
